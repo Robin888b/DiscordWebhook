@@ -18,10 +18,17 @@
     <section class="sb">
         <div class="UI">
             <div class="container50">
-                <h1>Easy WebHook Sender <span id="titleAuthor">by Raven Spart</span></h1>
+                <h1>Easy WebHook Sender <span id="titleAuthor">by Raven Spart</span></h1><br>
                 <input type="url" name="" placeholder="Put here the link of your WebHook" id="WebhookLinkInput"><br><br>
-                <textarea name="" style="resize:vertical;" id="WebhookTextInput" placeholder="Your Text here !"></textarea>
-                <button onclick="sendHook()">test</button>
+                <textarea name="" style="resize:none;" id="WebhookTextInput" placeholder="Your Text here !"></textarea><br><br>
+                <p id="CustomWhProfilCheck" onclick="tgl1()" style="display:flex;">Use a custom profil</p>
+                <div id="customWhProfil">
+                    <input type="text" id="WhNameInput" placeholder="Name of the webhook">
+                    <input type="url" id="WhPpUrlInput" placeholder="url of the picture">
+                </div>
+
+                <br><br><br><button onclick="sendHook()">test</button>
+
             </div>
         </div>
         <div class="display"></div>

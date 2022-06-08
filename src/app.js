@@ -1,12 +1,8 @@
-function get(id){
-	return document.getElementById(id).value
-}
-function getC(id){
-	return document.getElementById(id).checked
-}
 
 
 
+
+/*
 let variable
 fetch('https://ptb.discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iyUFomwYo-2WTSHQ-DGbSRNV_nzsC5bBGuVy-Omx1nFYiujJ_WqBs').then(function(response) {
     return response.json();
@@ -14,32 +10,39 @@ fetch('https://ptb.discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iy
     console.log(data);
     variable = data
     console.log("WebHook avatar = https://cdn.discordapp.com/avatars/"+variable.id+"/"+variable.avatar+".jpg")
-})
+})*/
 
-const webtesturl = 'https://discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iyUFomwYo-2WTSHQ-DGbSRNV_nzsC5bBGuVy-Omx1nFYiujJ_WqBs/'
+const webTestUrl = 'https://discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iyUFomwYo-2WTSHQ-DGbSRNV_nzsC5bBGuVy-Omx1nFYiujJ_WqBs'
+
 
 function sendHook(){
-    url = webtesturl
-    jsonMsg = msg
-	xhr = new XMLHttpRequest();
+    let WebhookTextInput = document.getElementById("WebhookTextInput").value
+    url = 'https://discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iyUFomwYo-2WTSHQ-DGbSRNV_nzsC5bBGuVy-Omx1nFYiujJ_WqBs'
+    xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json");
-	var data = JSON.stringify(jsonMsg);
+	var data = JSON.stringify({
+        "content": WebhookTextInput,
+        "username": "username",
+        "avatar_url": "https://i.imgur.com/AfFp7pu.png",
+    });
+    console.log(data)
 	xhr.send(data);
 	xhr.onreadystatechange = function() {
 		if(this.status != 200){
-			alert(this.responseText);
+			console.log(this.responseText);
 		}
 	}
+    alert("send")
 }
 /* https://ptb.discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iyUFomwYo-2WTSHQ-DGbSRNV_nzsC5bBGuVy-Omx1nFYiujJ_WqBs */
 
 
 
 
-
-let msg = {
-    "username": "document.getElementById('name').value",
-    "text": "document.getElementById('content').value"
+function tgl1() {
+    let WhProfilchek = document.getElementById("CustomWhProfilCheck")
+    let WhProfilMenu = document.getElementById("customWhProfil")
+    WhProfilchek.classList.toggle("checked")
+    WhProfilMenu.classList.toggle("show")
 }
-du

@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
     --backgroundColor1: #36393F ;
+    --backgroundColor2: #2F3136 ;
+    --backgroundColor3: #292B2F ;
     --TextColor1: #ffffff ;
     --TextColor2: #B9BABC ;
     --inputColor: #40444B ;
@@ -32,8 +34,11 @@ body {
 }
 
 .container50 {
-    width: 40vw;
-    margin: 5vw;
+    width: 44vw;
+    margin: 2vw;
+    padding: 1vw;
+    background-color: var(--backgroundColor2);
+    border-radius: 8px;
 }
 .titleAuthor {
     color: var(--TextColor2, #B9BABC);
@@ -43,19 +48,49 @@ body {
 }
 #WebhookTextInput {
     width: 100%;
+    height: 8em;
 }
 input, textarea {
     padding: 5px;
     background-color: var(--inputColor);
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
+    font-size: 1em;
+    color: var(--TextColor1, #ffffff);
 }
-
-
-
-
-
-
+#CustomWhProfilCheck {
+    font-size: 1em;
+    cursor:pointer;
+    display: block;
+}
+#CustomWhProfilCheck:hover {
+    text-decoration: underline;
+}
+#CustomWhProfilCheck::before {
+    content: "";
+    display: block;
+    height: 1em;
+    width: 1em;
+    margin-right: 0.5em;
+    background-color: #fff;
+    border-radius: 2px;
+}
+#CustomWhProfilCheck.checked::before {
+    background-color: green;
+}
+#customWhProfil {
+    display: none;
+    background-color: var(--backgroundColor3);
+}
+#customWhProfil.show {
+    display: contents;
+}
+#WhNameInput {
+    width: 30%;
+}
+#WhPpUrlInput {
+    width: 65%;
+}
 
 .display {
     width: 50vw;
