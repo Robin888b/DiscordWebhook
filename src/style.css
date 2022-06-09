@@ -4,9 +4,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    list-style: none;
 }
 
-html {
+textarea {
+    height: 5em;
+}
+
+:root {
     --backgroundColor1: #36393F ;
     --backgroundColor2: #2F3136 ;
     --backgroundColor3: #292B2F ;
@@ -14,7 +19,8 @@ html {
     --TextColor2: #B9BABC ;
     --inputColor: #40444B ;
     --EmbedBackColor: #2F3136 ;
-    --EmbedLigneColor: ;
+    --DiscordRedColor: #ED4245;
+    --DiscordGreenColor: #57F287;
 }
 
 body {
@@ -51,11 +57,12 @@ body {
     height: 8em;
 }
 input, textarea {
-    padding: 5px;
     background-color: var(--inputColor);
     border: none;
-    border-radius: 6px;
-    font-size: 1em;
+    font-size: 0.9em;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 3px;
     color: var(--TextColor1, #ffffff);
 }
 #CustomWhProfilCheck {
@@ -76,21 +83,93 @@ input, textarea {
     border-radius: 2px;
 }
 #CustomWhProfilCheck.checked::before {
-    background-color: green;
+    background-color: #57F287;
 }
 #customWhProfil {
     display: none;
     background-color: var(--backgroundColor3);
+    padding: 7px;
+    margin: 3px;
+    border-radius: 8px;
 }
 #customWhProfil.show {
-    display: contents;
+    display: flex;
+}
+#customWhbox2 {
+    padding-left: 10px;
 }
 #WhNameInput {
-    width: 30%;
+    width: 100%;
+    font-size: 0.9em;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 3px;
 }
 #WhPpUrlInput {
-    width: 65%;
+    width: 250%;
+    font-size: 0.9em;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 3px;
 }
+#WhPp1 {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    background-color: #5865F2;
+    border-radius: 100px;
+}
+.WhEmbedUiItemTitle {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--backgroundColor3);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.WhEmbedUiItemDiv {
+    margin-top: 3px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--backgroundColor3);
+    display: none;
+}
+
+.WhEmbedUiItemDiv.active {
+    display:flex;
+    flex-direction: column;
+}
+.dspFlexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+#NewEmbedSpan {
+    background-color: #57F287;
+    padding: 3px;
+    margin-left: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    right: 0;
+    color: #000000;
+}
+#NewEmbedSpan:hover {
+ background-color: #8FF6AF;
+}
+.WhEmbedUiRemoveBtn {
+    background-color: #ED4245;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
 
 .display {
     width: 50vw;

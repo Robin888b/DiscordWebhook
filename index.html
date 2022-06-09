@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -21,11 +21,49 @@
                 <h1>Easy WebHook Sender <span id="titleAuthor">by Raven Spart</span></h1><br>
                 <input type="url" name="" placeholder="Put here the link of your WebHook" id="WebhookLinkInput"><br><br>
                 <textarea name="" style="resize:none;" id="WebhookTextInput" placeholder="Your Text here !"></textarea><br><br>
+
+                <!-- profil custom -->
                 <p id="CustomWhProfilCheck" onclick="tgl1()" style="display:flex;">Use a custom profil</p>
                 <div id="customWhProfil">
-                    <input type="text" id="WhNameInput" placeholder="Name of the webhook">
-                    <input type="url" id="WhPpUrlInput" placeholder="url of the picture">
-                </div>
+                    <img src="./src/img/svg/discord_logo_old.svg" alt="" id="WhPp1">
+                    <div id="customWhbox2">
+                        <input type="text" id="WhNameInput" placeholder="Name of the webhook"><br>
+                        <input type="url" id="WhPpUrlInput" placeholder="url of the picture">
+                    </div>
+                </div><br>
+
+                <!-- Embeds -->
+                <p>Embed     <span id="NewEmbedSpan">New embed</span></p><br>
+
+                <ul id="WhEmbedListUi">
+                    <li class="WhEmbedUiItem">
+                        <div class="WhEmbedUiItemTitle">
+                            <p onclick="revealEmb(1)" style="flex-grow: 5;">Embed 1</p>
+                            <p class="WhEmbedUiRemoveBtn">remove</p>
+                        </div>
+                        <div class="WhEmbedUiItemDiv" id="WhEmbUi1">
+                            <div class="dspFlexRow">
+                                <input type="text" placeholder="Embed Title" id="WhEmbedUiItemInpTitle">
+                                <input type="url" placeholder="Embed Title URL" id="WhEmbedUiItemInpUrl" style="flex-grow: 2;">
+                            </div>
+                            <textarea style="resize:none;" id="WhEmbedUiItemInpDesc" placeholder="Embed description"></textarea>
+                            <div class="dspFlexRow">
+                                <input type="color" id="WhEmbedUiItemInpColor" value="#ffffff"><label for="WhEmbedUiItemInpColor">Embed color</label>
+                            </div>
+                            <div class="dspFlexRow">
+                                <input type="url" placeholder="Thumbnail Url" id="WhEmbedUiItemInpThumbUrl" style="flex-grow: 1;">
+                                <input type="url" placeholder="Image Url" id="WhEmbedUiItemInpImgUrl" style="flex-grow: 1;">
+                            </div>
+                            <div class="dspFlexRow">
+                                <input type="text" id="WhEmbedUiItemInpAuthName" placeholder="Author name">
+                                <input type="Url" id="WhEmbedUiItemInpAuthUrl" placeholder="Author link" style="flex-grow: 2;">
+                            </div>
+                            <input type="Url" id="WhEmbedUiItemInpAutImgUrl" placeholder="Author image url">
+
+                        </div>
+                    </li>
+                </ul>
+
 
                 <br><br><br><button onclick="sendHook()">test</button>
 
