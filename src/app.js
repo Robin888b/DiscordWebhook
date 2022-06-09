@@ -1,5 +1,7 @@
 
-
+const loadItem = async () => {
+    
+}
 
 
 /*
@@ -17,7 +19,7 @@ const webTestUrl = 'https://discord.com/api/webhooks/981910278977515560/pHNojKrK
 
 function sendHook(){
     let WebhookTextInput = document.getElementById("WebhookTextInput").value
-    url = 'https://discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iyUFomwYo-2WTSHQ-DGbSRNV_nzsC5bBGuVy-Omx1nFYiujJ_WqBs'
+    let url = document.getElementById("WebhookLinkInput").value
     xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json");
@@ -35,9 +37,6 @@ function sendHook(){
 	}
     alert("send")
 }
-/* https://ptb.discord.com/api/webhooks/981910278977515560/pHNojKrKTN3up54iyUFomwYo-2WTSHQ-DGbSRNV_nzsC5bBGuVy-Omx1nFYiujJ_WqBs */
-
-
 
 
 function tgl1() {
