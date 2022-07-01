@@ -1,4 +1,8 @@
 alert("Website under developpement, Embed system don't work")
+
+
+let emogis = ['🐵', '🐶', '🐺', '🐱', '🦁', '🐯', '🦒', '🦊', '🦝', '🐮', '🐷', '🐗', '🐭', '🐹', '🐰', '🐻', '🐻‍❄️', '🐨', '🐼', '🐸', '🦓', '🐴', '🦄', '🐔', '🐲', '🐒', '🦍', '🦧']
+let ascEmogis = ["(¬‿¬)","☜(ﾟヮﾟ☜)","ᓚᘏᗢ","(⌐■_■)","(❁´◡`❁)",";D","✪ ω ✪","(⊙_⊙;)",":D","^_^","U_U"]
 /*
 const WebhookLinkInput = document.querySelector("#WebhookLinkInput")
 WebhookLinkInput.addEventListener('input', function () {
@@ -84,4 +88,34 @@ function tgl1() {
 function revealEmb(nb) {
     let content = document.getElementById(`WhEmbUi${nb}`)
     content.classList.toggle("active")
+}
+
+function seeTest(nbt) {
+    var embedlistContent = document.getElementById("WhEmbedListUi").innerHTML;
+    let nb = embedlistContent.split("id=\"WhEmbUi")
+    console.log(nb[nbt])
+}
+
+var embedNb = 1
+
+
+
+function addEmbed() {
+    var embedlist = document.getElementById("WhEmbedListUi");
+    var embedCount = document.getElementById("embednbr")
+    if (embedlist.childElementCount > 8){alert("you can't send more embeds 👀");return};
+    embedCount.innerHTML = String(embedlist.childElementCount + 1);embedNb = embedlist.childElementCount;
+    let emojisnb = Math.floor(Math.random() * (emogis.length - 0) + 0)
+    let ascEmojisnb = Math.floor(Math.random() * ascEmogis.length)
+    var text = `<li class="WhEmbedUiItem" id="embUi${embedNb}"><div class="WhEmbedUiItemTitle"> <!--Embed title--><p onclick="revealEmb(${embedNb})" style="flex-grow: 5;">Embed ${emogis[emojisnb]}</p><p class="WhEmbedUiRemoveBtn">${ascEmogis[ascEmojisnb]}</p></div><div class="WhEmbedUiItemDiv" id="WhEmbUi${embedNb}"> <!--Embed content--><div class="dspFlexRow"><input type="text" placeholder="Embed Title" id="WhEmbedUiItemInpTitle"><input type="url" placeholder="Embed Title URL" id="WhEmbedUiItemInpUrl" style="flex-grow: 2;"></div><textarea style="resize:none;" id="WhEmbedUiItemInpDesc" placeholder="Embed description"></textarea><div class="dspFlexRow"><input type="color" id="WhEmbedUiItemInpColor" value="#ffffff"><label for="WhEmbedUiItemInpColor">Embed color</label></div><div class="dspFlexRow"><input type="url" placeholder="Thumbnail Url" id="WhEmbedUiItemInpThumbUrl" style="flex-grow: 1;"><input type="url" placeholder="Image Url" id="WhEmbedUiItemInpImgUrl" style="flex-grow: 1;"></div><div class="dspFlexRow"><input type="text" id="WhEmbedUiItemInpAuthName" placeholder="Author name"><input type="Url" id="WhEmbedUiItemInpAuthUrl" placeholder="Author link" style="flex-grow: 2;"></div><input type="Url" id="WhEmbedUiItemInpAutImgUrl" placeholder="Author image url"></div></li>`
+    
+    embedlist.innerHTML += text
+}
+
+function removeEmbed() {
+    var embedlist = document.getElementById("WhEmbedListUi");
+    var embedCount = document.getElementById("embednbr")
+    if (embedlist.childElementCount < 1){return}
+    embedlist.removeChild(embedlist.lastChild)
+    embedCount.innerHTML = String(embedlist.childElementCount)
 }

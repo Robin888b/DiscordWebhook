@@ -33,15 +33,17 @@
                 </div><br>
 
                 <!-- Embeds -->
-                <p>Embed     <span id="NewEmbedSpan">New embed</span></p><br>
+                <p>Embed(s) (<span id="embednbr">1</span>)    <span id="NewEmbedSpan" onclick="addEmbed()">New embed</span>     <span id="DellEmbedSpan" onclick="removeEmbed()">delete the last embed</span></p><br>
 
                 <ul id="WhEmbedListUi">
-                    <li class="WhEmbedUiItem">
-                        <div class="WhEmbedUiItemTitle">
-                            <p onclick="revealEmb(1)" style="flex-grow: 5;">Embed 1</p>
-                            <p class="WhEmbedUiRemoveBtn">remove</p>
+
+                    <li class="WhEmbedUiItem" id="embUi1">
+                        <div class="WhEmbedUiItemTitle"> <!--Embed title-->
+                            <p onclick="revealEmb(1)" style="flex-grow: 5;">Embed 🐼</p>
+                            <p class="WhEmbedUiRemoveBtn">¯\_(ツ)_/¯</p>
                         </div>
-                        <div class="WhEmbedUiItemDiv" id="WhEmbUi1">
+
+                        <div class="WhEmbedUiItemDiv" id="WhEmbUi1"> <!--Embed content-->
                             <div class="dspFlexRow">
                                 <input type="text" placeholder="Embed Title" id="WhEmbedUiItemInpTitle">
                                 <input type="url" placeholder="Embed Title URL" id="WhEmbedUiItemInpUrl" style="flex-grow: 2;">
@@ -65,7 +67,7 @@
                 </ul>
 
 
-                <br><br><br><button onclick="sendHook()">test</button>
+                <br><br><br><button onclick="sendHook()">Send</button>
 
             </div>
         </div>

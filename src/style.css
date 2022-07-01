@@ -126,6 +126,7 @@ input, textarea {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 .WhEmbedUiItemDiv {
     margin-top: 3px;
@@ -159,13 +160,23 @@ input, textarea {
 #NewEmbedSpan:hover {
  background-color: #8FF6AF;
 }
-.WhEmbedUiRemoveBtn {
+
+#DellEmbedSpan {
     background-color: #ED4245;
     padding: 3px;
+    margin-left: 5px;
     padding-left: 7px;
     padding-right: 7px;
     border-radius: 3px;
     cursor: pointer;
+    right: 0;
+}
+
+
+
+.WhEmbedUiRemoveBtn {
+    padding-right: 7px;
+    cursor:default;
 }
 
 
