@@ -134,13 +134,10 @@ input, textarea {
     padding: 5px;
     border-radius: 5px;
     background-color: var(--backgroundColor3);
-    display: none;
-}
-
-.WhEmbedUiItemDiv.active {
     display:flex;
     flex-direction: column;
 }
+
 .dspFlexRow {
     display: flex;
     flex-direction: row;

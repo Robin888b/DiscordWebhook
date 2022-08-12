@@ -23,6 +23,7 @@
                 <textarea name="" style="resize:none;" id="WebhookTextInput" placeholder="Your Text here !"></textarea><br><br>
 
                 <!-- profil custom -->
+                
                 <p id="CustomWhProfilCheck" onclick="tgl1()" style="display:flex;">Use a custom profil</p>
                 <div id="customWhProfil">
                     <img src="./src/img/svg/discord_logo_old.svg" alt="" id="WhPp1">
@@ -38,31 +39,36 @@
                 <ul id="WhEmbedListUi">
 
                     <li class="WhEmbedUiItem" id="embUi1">
-                        <div class="WhEmbedUiItemTitle"> <!--Embed title-->
-                            <p onclick="revealEmb(1)" style="flex-grow: 5;">Embed 🐼</p>
-                            <p class="WhEmbedUiRemoveBtn">¯\_(ツ)_/¯</p>
-                        </div>
 
+                        <details>
+                            <summary><div class="WhEmbedUiItemTitle"> <!--Embed title-->
+                            <p style="flex-grow: 5;">Embed 1 🐼</p>
+                            <p class="WhEmbedUiRemoveBtn">¯\_(ツ)_/¯</p>
+                        </div></summary>
                         <div class="WhEmbedUiItemDiv" id="WhEmbUi1"> <!--Embed content-->
                             <div class="dspFlexRow">
-                                <input type="text" placeholder="Embed Title" id="WhEmbedUiItemInpTitle">
-                                <input type="url" placeholder="Embed Title URL" id="WhEmbedUiItemInpUrl" style="flex-grow: 2;">
+                                <input type="text" placeholder="Embed Title" id="WhEmbedUiItemInpTitle1">
+                                <input type="url" placeholder="Embed Title URL" id="WhEmbedUiItemInpUrl1" style="flex-grow: 2;">
                             </div>
-                            <textarea style="resize:none;" id="WhEmbedUiItemInpDesc" placeholder="Embed description"></textarea>
+                            <textarea style="resize:none;" id="WhEmbedUiItemInpDesc1" placeholder="Embed description"></textarea>
                             <div class="dspFlexRow">
-                                <input type="color" id="WhEmbedUiItemInpColor" value="#ffffff"><label for="WhEmbedUiItemInpColor">Embed color</label>
-                            </div>
-                            <div class="dspFlexRow">
-                                <input type="url" placeholder="Thumbnail Url" id="WhEmbedUiItemInpThumbUrl" style="flex-grow: 1;">
-                                <input type="url" placeholder="Image Url" id="WhEmbedUiItemInpImgUrl" style="flex-grow: 1;">
+                                <input type="color" id="WhEmbedUiItemInpColor1" value="#ffffff"><label for="WhEmbedUiItemInpColor">Embed color</label>
                             </div>
                             <div class="dspFlexRow">
-                                <input type="text" id="WhEmbedUiItemInpAuthName" placeholder="Author name">
-                                <input type="Url" id="WhEmbedUiItemInpAuthUrl" placeholder="Author link" style="flex-grow: 2;">
+                                <input type="url" placeholder="Thumbnail Url" id="WhEmbedUiItemInpThumbUrl1" style="flex-grow: 1;">
+                                <input type="url" placeholder="Image Url" id="WhEmbedUiItemInpImgUrl1" style="flex-grow: 1;">
                             </div>
-                            <input type="Url" id="WhEmbedUiItemInpAutImgUrl" placeholder="Author image url">
+                            <div class="dspFlexRow">
+                                <input type="text" id="WhEmbedUiItemInpAuthName1" placeholder="Author name">
+                                <input type="Url" id="WhEmbedUiItemInpAuthUrl1" placeholder="Author link" style="flex-grow: 2;">
+                            </div>
+                            <input type="Url" id="WhEmbedUiItemInpAutImgUrl1" placeholder="Author image url">
 
                         </div>
+                        </details>
+                        
+
+                        
                     </li>
                 </ul>
 
